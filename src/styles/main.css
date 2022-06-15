@@ -1,0 +1,406 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    font-size: 12px;
+    color: #424242;
+}
+
+/*
+ * Skip to content
+ */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/*
+ * Header
+ */
+
+.header {
+    min-height: 56px;
+    transition: min-height 0.3s;
+}
+
+.header__inner {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__title {
+    font-weight: 300;
+    font-size: 4em;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+    color: #212121;
+}
+
+.header__menu {
+    font-size: 32px;
+    margin: 10px auto;
+    display: block;
+    width: 30px;
+    border-style: none;
+    background-color: #fff;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/*
+ * Top level navigation
+ */
+
+.nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.nav__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color: #616161;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: #ff7404;
+}
+
+/*
+ * Jumbotron
+ */
+
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 700px;
+    min-width: 100%;
+    width: 100%;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)) ,url("../public/images/hero-image_2.jpg");
+    background-position: center;
+    background-color: green;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+.hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/*
+ * main
+ */
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    flex: 1;
+}
+
+/*
+ * content
+ */
+
+.content {
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+/*
+ * explore
+ */
+
+.explore {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.explore__label {
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.explore__label::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/*
+ * list
+ */
+
+.list {
+    margin: 32px auto auto;
+    text-align: left;
+}
+
+/*
+ * list item
+ */
+
+.list-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.list-item__content {
+    padding: 16px;
+}
+
+.list-item__thumbnail {
+    width: 100%;
+}
+
+.list-item__rating {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ffb400;
+}
+
+.list-item__title {
+    font-weight: bolder;
+    font-size: 31px;
+    margin-top: 16px;
+    transition: 0.3s opacity;
+}
+
+.list-item__title:hover {
+    opacity: 0.5;
+}
+
+.list-item__title a {
+    text-decoration: none;
+    color: #ff7404;
+}
+
+.list-item__city {
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 16px;
+    color: #40ba37;
+}
+
+.list-item__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+            line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/*
+ * Restaurant
+ */
+
+.restaurant {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+}
+
+.restaurant .restaurant__title {
+    font-size: 28px;
+    color: #ff7404;
+}
+
+.restaurant .restaurant__poster {
+    width: 100%;
+    max-width: 600px;
+}
+
+.restaurant .restaurant__info h3 {
+    font-size: 24px;
+    color: #ffb400;
+}
+
+.restaurant .restaurant__info h4 {
+    margin: 8px 0;
+    font-size: 20px;
+    color: #40ba37;
+}
+
+.restaurant .restaurant__info p {
+    font-size: 16px;
+}
+
+.restaurant .restaurant__overview h3 {
+    font-size: 20px;
+    color: #40ba37;
+}
+
+.restaurant .restaurant__overview p {
+    font-size: 16px;
+}
+
+.restaurant .restaurant__overview li {
+    font-size: 16px;
+}
+
+.restaurant .restaurant__overview table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+}
+
+.restaurant .restaurant__overview th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.restaurant .restaurant__overview tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*
+ * Review Form
+ */
+
+.review_form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.label_text {
+    font-size: 20px;
+    color: #40ba37;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 44px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #ff7404;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type=submit]:hover {
+    background-color: #ff6404;
+}
+
+/*
+ * Like
+ */
+
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+ * footer
+ */
+
+footer {
+    background-color: #fff;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    color: #000;
+    font-size: 1.5em;
+}
