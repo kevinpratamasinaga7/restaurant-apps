@@ -19,7 +19,7 @@ const Favorite = {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurantsList');
     if (restaurants.length === 0) {
-      restaurantsContainer.innerHTML = `<h2 style="text-align: center;">You don't have any favorite restaurant</h2>`;
+      restaurantsContainer.innerHTML = '<h2 style="text-align: center;">You don\'t have any favorite restaurant</h2>';
     }
     restaurants.forEach((restaurantList) => {
       restaurantsContainer.innerHTML += createRestaurantListTemplate(restaurantList);
